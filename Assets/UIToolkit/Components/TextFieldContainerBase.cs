@@ -6,8 +6,13 @@ namespace UI_Toolkit.Components
 {
     public abstract class TextFieldContainerBase : VisualElement
     {
+        protected new bool canGrabFocus = true;
         protected VisualElement _visualInput;
-        public TextFieldContainerBase(){}
+
+        public TextFieldContainerBase()
+        {
+            this.focusable = true;
+        }
 
         void OnInitialized()
         {
